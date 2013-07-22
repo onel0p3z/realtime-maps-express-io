@@ -1,0 +1,17 @@
+{
+    "name": "raeltime-maps-express-io",
+    "version": "0.0.1",
+    "description": "a localization exercise based on LeafletJS and Express.io",
+    "bin": "app.js",
+    "dependencies": {
+        "express.io": "*",
+        "path": "*"        
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com:onel0p3z/realtime-maps-express-io.git"
+    },
+    "author": {
+        "name": "Juan Lopez",
+    }
+}

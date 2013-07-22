@@ -1,17 +1,18 @@
 {
-    "name": "raeltime-maps-express-io",
-    "version": "0.0.1",
-    "description": "a localization exercise based on LeafletJS and Express.io",
-    "bin": "app.js",
+    "name": "realtime-maps-express-io",
+    "subdomain": "mianode",
+    "description": "Simple localization app",
+    "version": "0.0.1-2",
     "dependencies": {
         "express.io": "*",
-        "path": "*"        
+        "path": "*",
+        "jade": "*",
+        "mongoose": "*"
     },
-    "repository": {
-        "type": "git",
-        "url": "git://github.com:onel0p3z/realtime-maps-express-io.git"
+    "scripts": {
+        "start": "node app.js"
     },
-    "author": {
-        "name": "Juan Lopez",
+    "engines": {
+        "node": "0.8.x"
     }
 }

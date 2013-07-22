@@ -10,7 +10,7 @@ $(document).ready(function(){
     // Initialize map
     var map = L.map('map', {
                                center: [ 25.790, -80.336 ],
-                               zoom: 16 
+                               zoom: 13 
                            }
               ),
 
@@ -36,7 +36,7 @@ $(document).ready(function(){
     // why doesn't it work ??
     map.on('locationfound', onLocationFound);
     function onLocationFound(pos){
-        //console.log(pos);
+        console.log(pos);
         console.log('Your location is lat: '+pos.latlng.lat+' and lng: '+pos.latlng.lng);
 
         var marker = L.marker([ pos.latlng.lat, pos.latlng.lng ]);
@@ -44,7 +44,7 @@ $(document).ready(function(){
         marker.bindPopup("You are HERE!").openPopup();
 
         // Send location to server 
-        socket.emit('myLoc', { latlng: pos.latlng });
+        socket.emit('myLoc', { latlng: pos.latlng, name: name });
 
     }
     
@@ -61,6 +61,7 @@ $(document).ready(function(){
         //alert('Welcome ' + name + ' - ' + data.id);
         var usrsMarker = L.marker([ data.data.latlng.lat, data.data.latlng.lng ]);
         map.addLayer(usrsMarker);
+        map.panTo([ data.data.latlng.lat, data.data.latlng.lng ]);
         var msg = '<strong><em>' + data.id + '</em></strong><br>From: ' + data.address;
         usrsMarker.bindPopup(msg).openPopup();
     });
