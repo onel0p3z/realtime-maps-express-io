@@ -1,27 +1,28 @@
 {
-    "name": "realtime-maps-express-io",
-    "version": "0.0.1",
-    "description": "Simple demo app",
-    "main": "app.js",
-    "scripts": {
-        "start": "node app.js",
-        "test": " "
-    },
-    "engines": {
-        "node": "0.10.x"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/onel0p3z/realtime-maps-express-io.git"
-    },
-    "author": "onel0p3z <onel0p3z@gmail.com>",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/onel0p3z/realtime-maps-express-io/issues"
-    },
-    "homepage": "https://github.com/onel0p3z/realtime-maps-express-io",
-    "dependencies": {
-        "express.io": "^1.1.13",
-        "jade": "^1.7.0"
-    }
+  "name": "realtime-maps-express-io",
+  "version": "0.0.1",
+  "description": "Simple demo app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": " "
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/onel0p3z/realtime-maps-express-io.git"
+  },
+  "author": "onel0p3z <onel0p3z@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/onel0p3z/realtime-maps-express-io/issues"
+  },
+  "homepage": "https://github.com/onel0p3z/realtime-maps-express-io",
+  "dependencies": {
+    "express.io": "^1.1.13",
+    "jade": "^1.7.0",
+    "mongoose": "^3.8.16"
+  }
 }
