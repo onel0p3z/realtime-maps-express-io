@@ -7,7 +7,7 @@ var express = require('express.io'),
 mongoose.connect('mongodb://localhost/mianode');
 
 app.configure(function(){
-    app.set('port', process.argv[2] || 3000);
+    app.set('port', process.env.PORT || 5000);
     app.set('views', __dirname + '/views' );
     app.set('view engine', 'jade');
     app.use(express.logger('dev'));
@@ -89,6 +89,6 @@ app.io.route('myLoc', function(req){
     });
 });
 
-app.listen(3000, function(){
+app.listen(app.get('port'), function(){
     console.log('Express running at localhost on port' + app.get('port'));
 });
