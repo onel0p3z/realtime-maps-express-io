@@ -7,6 +7,7 @@ var express = require('express.io'),
 mongoose.connect('mongodb://localhost/mianode');
 
 app.configure(function(){
+    app.set('port', process.argv[2] || 3000);
     app.set('views', __dirname + '/views' );
     app.set('view engine', 'jade');
     app.use(express.logger('dev'));
@@ -43,7 +44,11 @@ app.io.configure(function() {
 });
 
 //var NODE_ENV = 'development';
-//app.configure('development', function(){app.use(express.errorHandler({dumpExceptions: true,showStack: true}));});
+app.configure('development', function(){
+    app.use(express.errorHandler({
+        dumpExceptions: true,showStack: true
+    }));
+});
 
 app.get('/', function(req , res){
     res.render('layout', {
@@ -84,6 +89,6 @@ app.io.route('myLoc', function(req){
     });
 });
 
-app.listen(8080, function(){
-    console.log('Express running at localhost on port 8080   ... ');
+app.listen(3000, function(){
+    console.log('Express running at localhost on port' + app.get('port'));
 });

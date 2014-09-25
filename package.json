@@ -1,18 +1,23 @@
 {
-    "name": "realtime-maps-express-io",
-    "subdomain": "mianode",
-    "description": "Simple localization app",
-    "version": "0.0.1-2",
-    "dependencies": {
-        "express.io": "*",
-        "path": "*",
-        "jade": "*",
-        "mongoose": "*"
-    },
-    "scripts": {
-        "start": "node app.js"
-    },
-    "engines": {
-        "node": "0.8.x"
-    }
+  "name": "realtime-maps-express-io",
+  "version": "0.0.1",
+  "description": "Simple demo app",
+  "main": "app.js",
+  "scripts": {
+    "test": " "
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/onel0p3z/realtime-maps-express-io.git"
+  },
+  "author": "onel0p3z <onel0p3z@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/onel0p3z/realtime-maps-express-io/issues"
+  },
+  "homepage": "https://github.com/onel0p3z/realtime-maps-express-io",
+  "dependencies": {
+    "express.io": "^1.1.13",
+    "jade": "^1.7.0"
+  }
 }
